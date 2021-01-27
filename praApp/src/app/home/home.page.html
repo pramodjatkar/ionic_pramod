@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Title Text</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <ion-item>
+      <ion-label position = "floating">Full name</ion-label>
+      <ion-input type="text" [(ngModel)]="user.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position = "floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position = "floating">Mobile</ion-label>
+      <ion-input type="tel" [(ngModel)]="user.tel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position = "floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    <ion-radio-group [(ngModel)]="user.gender">
+      <ion-item>
+        <ion-label>Male</ion-label>
+        <ion-radio slot="end" value="male"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Female</ion-label>
+        <ion-radio slot="end" value="female"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Others</ion-label>
+        <ion-radio slot="end" value="others"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+    <ion-item>
+      <ion-label>
+        State
+      </ion-label>
+      <ion-select slot="end" [(ngModel)]="user.state">
+        <ion-select-option>Karnatak</ion-select-option>
+        <ion-select-option>Tamil Naadu</ion-select-option>
+        <ion-select-option>Andra Pradesh</ion-select-option>
+        <ion-select-option>Maharastra</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-toolbar>
+    <ion-button (click)="submit()" routerLink = '/home2'>submit</ion-button>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-button (click)="addTask()">Add</ion-button>
+  </ion-toolbar>
+  <ion-content class="ion-margin">
+    <ion-grid class="ion-margin">
+      <ion-row>
+        <ion-col>Username</ion-col>
+        <ion-col>Email</ion-col>
+        <ion-col>Mobile No</ion-col>
+        <ion-col>Password</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let todo of taskList">
+        <ion-col>{{todo }}</ion-col>
+        <ion-col>{{ todo.email }}</ion-col>
+        <ion-col>{{ todo.phone }}</ion-col>
+        <ion-col>{{ student.country }}</ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    <ion-item lines="none">
+      <ion-button color="primary" size="small" slot="end" routerLink="/material">
+        Material Design Table
+      </ion-button>
+    </ion-item>
+  </ion-content>
+</ion-content>

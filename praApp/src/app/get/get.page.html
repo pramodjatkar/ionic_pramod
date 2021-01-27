@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>get</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="GetUserDetails()">Get user Details</ion-button>
+  <ion-list *ngFor="let user of userDetails">
+    <ion-item>
+      {{user.first_name}} {{user.last_name}}
+    </ion-item>
+  </ion-list>
+</ion-content>

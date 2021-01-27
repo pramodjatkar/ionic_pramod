@@ -1,0 +1,7 @@
+[{"empId":1, "empName":"Pramod", "deptName":"Computer"},
+ {"empId":2, "empName":"Praveen", "deptName":"Finance"},
+ {"empId":3, "empName":"Prakash", "deptName":"Account"},
+ {"empId":4, "empName":"Prashant", "deptName":"R&D"},
+ {"empId":5, "empName":"Pratap", "deptName":"Computer"},
+ {"empId":6, "empName":"Pralobh", "deptName":"HR"},
+ {"empId":7, "empName":"Prakyat", "deptName":"Marketing"}]
