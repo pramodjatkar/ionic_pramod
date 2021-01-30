@@ -16,10 +16,7 @@ export class HomePage {
   taskList = [];
 
     addTask() {
-        if (this.user.name.length > 0) {
-            let task = this.user.name;
-            this.taskList.push(task);
-            this.user.name = "";
-        }
+        console.log(this.user);
+        this.taskList.push(this.user);
     }
 }

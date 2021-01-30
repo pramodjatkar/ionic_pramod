@@ -57,9 +57,6 @@
     </ion-item>
   </ion-list>
   <ion-toolbar>
-    <ion-button (click)="submit()" routerLink = '/home2'>submit</ion-button>
-  </ion-toolbar>
-  <ion-toolbar>
     <ion-button (click)="addTask()">Add</ion-button>
   </ion-toolbar>
   <ion-content class="ion-margin">
@@ -68,20 +65,14 @@
         <ion-col>Username</ion-col>
         <ion-col>Email</ion-col>
         <ion-col>Mobile No</ion-col>
-        <ion-col>Password</ion-col>
+        <ion-col>State</ion-col>
       </ion-row>
       <ion-row *ngFor="let todo of taskList">
-        <ion-col>{{todo }}</ion-col>
+        <ion-col>{{todo.name }}</ion-col>
         <ion-col>{{ todo.email }}</ion-col>
-        <ion-col>{{ todo.phone }}</ion-col>
-        <ion-col>{{ student.country }}</ion-col>
+        <ion-col>{{ todo.tel }}</ion-col>
+        <ion-col>{{ todo.state }}</ion-col>
       </ion-row>
     </ion-grid>
-  
-    <ion-item lines="none">
-      <ion-button color="primary" size="small" slot="end" routerLink="/material">
-        Material Design Table
-      </ion-button>
-    </ion-item>
   </ion-content>
 </ion-content>
